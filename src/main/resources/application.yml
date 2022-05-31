@@ -1,2 +1,17 @@
 server:
   port: 8081
+
+spring:
+  datasource:
+    url: jdbc:h2:~/Documentos/projetos/Spring/cryptodatabase;DB_CLOSE_ON_EXIT=FALSE
+    username: fiap
+    password: fiap
+  jpa:
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+
+fiap:
+  debug: true

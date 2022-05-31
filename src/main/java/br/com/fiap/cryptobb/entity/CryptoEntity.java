@@ -1,12 +1,32 @@
-package br.com.fiap.cryptobb;
+package br.com.fiap.cryptobb.entity;
 
+import javax.persistence.*;
 import java.math.BigDecimal;
 
-public class CreateUpdateCryptoDTO {
+@Entity
+@Table(name = "TB_CRYPTOS")
+public class CryptoEntity {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @Column
     private String name;
+
+    @Column
     private String acronym;
+
+    @Column
     private BigDecimal usdValue;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
